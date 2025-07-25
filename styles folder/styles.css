@@ -3,12 +3,11 @@
   margin: 0;
   padding: 0;
   text-align: left;
+  color: #000;
 }
 
 body {
   position: relative;
-  height: 100vh;
-  height: 100dvh;
   width: 90vw;
   max-width: 1200px;
   margin: 0 auto;
@@ -95,4 +94,28 @@ li {
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#social-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#download {
+  width: 50%;
+  margin: 0 auto;
+}
+#download-resume {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
 }
