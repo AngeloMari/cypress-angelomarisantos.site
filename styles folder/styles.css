@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  height: 100dvh;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+body > * {
+  margin-bottom: 5px;
+  border-radius: 8px;
+}
+
+section {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+h1 {
+  font-size: 1rem;
+}
+h2 {
+  font-size: 0.9rem;
+}
+p,
+li {
+  font-size: 0.8rem;
+}
+
+#theme-bar {
+  position: sticky;
+  top: 0;
+  width: 40%;
+  max-width: 200px;
+  height: auto;
+  margin-left: auto;
+  border: 2px solid #000;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+}
+
+.themes {
+  aspect-ratio: 1 / 1;
+  width: 20%;
+  max-width: 30px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+#hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+#hero * {
+  padding: 2px 0;
+}
+
+#about * {
+  padding: 2px 0;
+  text-align: justify;
+}
+#profile-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  border-radius: 50%;
+}
+
+#skills ul {
+  list-style-position: inside;
+}
+
+#works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5px;
+  padding: 0;
+  border: 0;
+}
+.my-works {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
