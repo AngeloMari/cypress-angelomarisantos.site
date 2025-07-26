@@ -3,10 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects</title>
+    <title>Certifications</title>
+    <script defer src="goBack.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="button-styles.css" />
     <link rel="stylesheet" href="/styles folder/certification-styles.css" />
   </head>
   <body>
+    <button onclick="goBack()" id="back-btn">Go Back</button>
     <div id="certification-container">
       <a
         href="https://www.freecodecamp.org/certification/RockyRaccoon08/responsive-web-design"
@@ -31,5 +38,8 @@
         />
       </a>
     </div>
+    <a id="back-to-top" href="#certification-container">
+      <span class="material-symbols-outlined">arrow_circle_up</span>
+    </a>
   </body>
 </html>

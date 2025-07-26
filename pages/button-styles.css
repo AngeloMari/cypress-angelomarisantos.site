@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#back-btn {
+  position: sticky;
+  top: 5%;
+  left: 5%;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  border: none;
+  border-radius: 50%;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.material-symbols-outlined {
+  font-size: 2rem;
+  color: #000;
+}
