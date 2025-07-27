@@ -9,7 +9,7 @@
 body {
   position: relative;
   width: 90vw;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -98,6 +98,7 @@ li {
 .my-works {
   aspect-ratio: 4 / 3;
   width: 100%;
+  height: 100%;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
@@ -175,18 +176,19 @@ li {
       "skills works works themes-about"
       "skills works works contact-download";
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 35% 18% 51%;
-    overflow: hidden;
+  }
+  #themes-about {
+    display: grid;
+    grid-template-rows: 11% auto;
+    gap: 12px;
   }
   #desktop-theme-bar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
-  #themes-about {
-    display: grid;
-    grid-template-rows: 15% auto;
-    gap: 12px;
+  .my-works {
+    aspect-ratio: 0;
   }
   #back-to-top,
   #mobile-theme-bar {
