@@ -9,21 +9,19 @@
 body {
   position: relative;
   width: 90vw;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-}
-body > * {
-  margin-bottom: 5px;
-  border-radius: 8px;
 }
 
 section {
   border: 1px solid #ccc;
-  padding: 5px;
+  padding: 20px;
+  margin-bottom: 5px;
+  border-radius: 8px;
 }
 
 h1 {
-  font-size: 1rem;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
 }
 h2 {
   font-size: 0.9rem;
@@ -33,7 +31,8 @@ li {
   font-size: 0.8rem;
 }
 
-#theme-bar {
+/* Themes */
+#mobile-theme-bar {
   position: sticky;
   top: 0;
   width: 40%;
@@ -49,7 +48,9 @@ li {
   align-items: center;
   background-color: #fff;
 }
-
+#desktop-theme-bar {
+  display: none;
+}
 .themes {
   aspect-ratio: 1 / 1;
   width: 20%;
@@ -59,6 +60,7 @@ li {
   cursor: pointer;
 }
 
+/* Welcome Section */
 #hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -66,21 +68,25 @@ li {
 #hero * {
   padding: 2px 0;
 }
+#profile-image {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+}
 
+/* About Section */
 #about * {
   padding: 2px 0;
   text-align: justify;
 }
-#profile-image {
-  aspect-ratio: 1 / 1;
-  width: 100%;
-  border-radius: 50%;
-}
 
+/* Skills Section */
 #skills ul {
   list-style-position: inside;
 }
 
+/* Works Section */
 #works {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -96,6 +102,7 @@ li {
   border-radius: 8px;
 }
 
+/* Contacts Section */
 #contact {
   display: flex;
   flex-direction: column;
@@ -107,6 +114,7 @@ li {
   grid-template-columns: repeat(2, 1fr);
 }
 
+/* Resume Section */
 #download {
   width: 50%;
   margin: 0 auto;
@@ -118,4 +126,70 @@ li {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  section {
+    margin-bottom: 0;
+  }
+  #hero {
+    grid-area: hero;
+  }
+  #themes-about {
+    grid-area: themes-about;
+  }
+  #skills {
+    grid-area: skills;
+  }
+  #works {
+    grid-area: works;
+    gap: 12px;
+  }
+  #contact-download {
+    grid-area: contact-download;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  #download {
+    width: 100%;
+  }
+  #grid-layout {
+    height: 100vh;
+    height: 100dvh;
+    display: grid;
+    grid-template-areas:
+      "hero hero hero hero hero"
+      "themes-about themes-about skills skills contact-download"
+      "works works works works contact-download";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #grid-layout {
+    grid-template-areas:
+      "hero hero hero themes-about"
+      "skills works works themes-about"
+      "skills works works contact-download";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 35% 18% 51%;
+    overflow: hidden;
+  }
+  #desktop-theme-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #themes-about {
+    display: grid;
+    grid-template-rows: 15% auto;
+    gap: 12px;
+  }
+  #back-to-top,
+  #mobile-theme-bar {
+    display: none;
+  }
 }
