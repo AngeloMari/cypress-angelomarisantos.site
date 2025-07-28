@@ -5,16 +5,17 @@
   --text-color1: #fefefe;
   --text-color2: #f6f6f6;
   --shadow: rgba(0, 0, 0, 0.5);
+  --online-status: #31cc46;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-align: left;
   font-family: "Inter", sans-serif;
-  color: var(--text-color2);
-  text-decoration: none;
   font-size: clamp(0.8rem, 2vw, 0.9rem);
+  text-align: left;
+  text-decoration: none;
+  color: var(--text-color2);
 }
 
 body {
@@ -26,10 +27,10 @@ body {
 }
 
 section {
-  border: 2px solid var(--border-color);
-  padding: clamp(10px, 2vw, 20px);
   margin-bottom: 5px;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
+  padding: clamp(10px, 2vw, 20px);
   background-color: var(--secondary-color);
 }
 
@@ -53,6 +54,10 @@ li {
 #mobile-theme-bar {
   position: sticky;
   top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   width: 40%;
   max-width: 200px;
   height: auto;
@@ -61,11 +66,7 @@ li {
   border-top: 0;
   border-radius: 0 0 8px 8px;
   padding: 5px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
   background-color: var(--secondary-color);
-  z-index: 1000;
   box-shadow: 0 2px 5px var(--shadow);
 }
 #desktop-theme-bar {
@@ -99,34 +100,34 @@ li {
 }
 #intro #name,
 #intro #emoji {
-  font-weight: 700;
   font-size: clamp(1rem, 3vw, 1.1rem);
+  font-weight: 700;
 }
 #status {
   position: relative;
-  width: clamp(100px, 30vw, 200px);
   aspect-ratio: 1 / 1;
+  width: clamp(100px, 30vw, 200px);
   margin: 0 auto;
   padding-left: 5%;
 }
 
 #profile-image {
-  width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: 50%;
+  width: 100%;
   object-fit: cover;
   border: 3px solid var(--border-color);
+  border-radius: 50%;
 }
 
 #online {
   position: absolute;
   bottom: 10%;
   right: 10%;
-  width: 12%;
   aspect-ratio: 1 / 1;
-  background-color: #31cc46;
+  width: 12%;
   border: 3px solid var(--border-color);
   border-radius: 50%;
+  background-color: var(--online-status);
 }
 
 /* About Section */
@@ -153,8 +154,8 @@ li {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 5px;
-  padding: 0;
   border: 0;
+  padding: 0;
   background-color: transparent;
 }
 .my-works {
@@ -180,10 +181,10 @@ li {
   margin-right: 10px;
 }
 #social-links {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  width: 100%;
   margin-top: 10px;
 }
 #social-links a {
@@ -199,11 +200,11 @@ li {
   margin: 0 auto;
 }
 #download-resume {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
 }
 #download-icon {
@@ -222,10 +223,10 @@ li {
   visibility: visible;
 }
 #arrow-circle {
+  border-radius: 50%;
   font-size: clamp(2.8rem, 5vw, 3rem);
   color: var(--text-color2);
   background-color: var(--primary-color);
-  border-radius: 50%;
   opacity: 0.75;
 }
 #arrow-circle:hover {
@@ -260,8 +261,6 @@ li {
     width: 100%;
   }
   #grid-layout {
-    height: 100vh;
-    height: 100dvh;
     display: grid;
     grid-template-areas:
       "hero hero hero hero hero"
@@ -269,6 +268,8 @@ li {
       "works works works works contact-download";
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 12px;
+    height: 100vh;
+    height: 100dvh;
     padding: 20px;
   }
 }

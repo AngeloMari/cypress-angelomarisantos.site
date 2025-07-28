@@ -10,23 +10,23 @@ html {
 }
 
 #back-btn {
-  z-index: 1000;
   position: sticky;
   top: 5%;
   left: 5%;
-  padding: clamp(5px, 1vw, 8px);
-  border-radius: 10px;
-  font-size: clamp(0.8rem, 3vw, 0.9rem);
-  background-color: var(--secondary-color);
-  color: var(--text-color2);
+  z-index: 1000;
   border: 2px solid var(--border-color);
+  border-radius: 10px;
+  padding: clamp(5px, 1vw, 8px);
+  font-size: clamp(0.8rem, 3vw, 0.9rem);
+  color: var(--text-color2);
+  background-color: var(--secondary-color);
   box-shadow: 0 4px 6px var(--shadow);
   opacity: 0.75;
 }
 #back-btn:hover {
-  opacity: 1;
   background-color: var(--primary-color);
   color: var(--text-color1);
+  opacity: 1;
 }
 
 #back-to-top {
