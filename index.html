@@ -8,8 +8,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <script defer src="/pages/goBack.js"></script>
+    <script defer src="/pages/scrollToTop.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/pages/button-styles.css" />
@@ -27,21 +34,25 @@
       <section id="hero">
         <div id="intro">
           <h1>Hello!</h1>
+          <br />
           <h2>
-            I’m Angelo, a computer engineer specialized in system development
-            with a focus on software quality assurance.
+            I’m <span id="name">Angelo</span>, a computer engineer specialized
+            in system development with a focus on software quality assurance.
           </h2>
+          <br />
           <p>
-            Feel free to explore my projects— I promise everything has been
-            tested! 😉
+            Feel free to explore my projects — I promise everything has been
+            tested! <span id="emoji">😉😉😉</span>
           </p>
+          <br />
         </div>
-        <div>
+        <div id="status">
           <img
-            src="images/artworks/ang-mahalaga-lumaban.png"
+            src="images/toga.jpg"
             alt="Angelo Mari Santos - Avatar"
             id="profile-image"
           />
+          <div id="online"></div>
         </div>
       </section>
       <div id="themes-about">
@@ -53,30 +64,30 @@
         </section>
         <section id="about">
           <h2>About Me</h2>
+          <br />
           <p>
-            I’m a Computer Engineer who enjoys figuring out how systems work —
-            and how to make them better. I’ve worked on designing and running
-            manual test cases using tools like LambdaTest and OpenProject,
-            making sure the end result is something people can actually count
-            on.<br />I’ve also played around with automation using Selenium and
-            Cypress, and I’m always curious to learn new tools that make testing
-            smarter and faster.<br />Outside of tech, you’ll probably find me
-            sketching, messing with music, or deep-diving into random topics
-            that spark my curiosity.
+            I enjoy figuring out how systems work and how to make them
+            better.<br /><br />
+            As an SQA tester, I've worked on designing and running manual test
+            cases using tools like LambdaTest and OpenProject. Now, I'm studying
+            automation with Selenium and Cypress.<br /><br />Outside of tech,
+            you’ll probably find me sketching, messing with music, or
+            deep-diving into random topics that spark my curiosity.
           </p>
         </section>
       </div>
       <section id="skills">
         <h2>Skills</h2>
+        <br />
         <ul>
-          <li>Software Quality Assurance</li>
-          <li>Manual Testing</li>
-          <li>Automation Testing</li>
-          <li>Test Case Design</li>
-          <li>LambdaTest</li>
-          <li>OpenProject</li>
-          <li>Selenium</li>
-          <li>Cypress</li>
+          <li><span>Tools:</span> LambdaTest, Cypress, and Selenium</li>
+          <li><span>Languages:</span> JavaScript, HTML, CSS</li>
+          <li>
+            <span>Testing Types:</span> Manual, Black Box, Regression,
+            Integration, and System Testing
+          </li>
+          <li><span>Methodologies:</span> Agile and Scrum</li>
+          <li><span>Others:</span> Test Case Design, Bug Reporting</li>
         </ul>
       </section>
       <section id="works">
@@ -102,23 +113,23 @@
               target="_blank"
               aria-label="GitHub"
             >
-              <i class="fab fa-github"></i> GitHub
+              <i class="fab fa-github"></i>GitHub
             </a>
             <a
               href="https://www.linkedin.com/in/engr-angelo-mari-santos/"
               target="_blank"
               aria-label="LinkedIn"
             >
-              <i class="fab fa-linkedin"></i> LinkedIn
+              <i class="fab fa-linkedin"></i>LinkedIn
             </a>
             <a href="mailto:santosangelomari@gmail.com" aria-label="Email">
-              <i class="fas fa-envelope"></i> Email
+              <i class="fas fa-envelope"></i>Email
             </a>
             <a href="tel:+639762407495" aria-label="Call +639762407495">
-              <i class="fas fa-phone"></i> Phone
+              <i class="fas fa-phone"></i>Phone
             </a>
             <a href="#" aria-label="Notifications">
-              <i class="fas fa-bell"></i> Click Me!
+              <i class="fas fa-bell"></i>Click Me!
             </a>
           </div>
         </section>
@@ -129,23 +140,17 @@
             id="download-resume"
           >
             <h2>My Resume</h2>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#1f1f1f"
-            >
-              <path
-                d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"
-              />
-            </svg>
+            <span class="material-symbols-outlined" id="download-icon">
+              download
+            </span>
           </a>
         </section>
       </div>
     </main>
     <a id="back-to-top" href="#">
-      <span class="material-symbols-outlined">arrow_circle_up</span>
+      <span class="material-symbols-outlined" id="arrow-circle"
+        >arrow_circle_up</span
+      >
     </a>
   </body>
 </html>

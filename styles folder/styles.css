@@ -1,34 +1,52 @@
+:root {
+  --primary-color: #252839;
+  --secondary-color: #2b2e3f;
+  --border-color: #4b4e5f;
+  --text-color1: #fefefe;
+  --text-color2: #f6f6f6;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   text-align: left;
-  color: #000;
+  font-family: "Inter", sans-serif;
+  color: var(--text-color2);
+  text-decoration: none;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
 }
 
 body {
   position: relative;
   width: 90vw;
-  max-width: 1000px;
+  max-width: 1150px;
   margin: 0 auto;
+  background-color: var(--primary-color);
 }
 
 section {
-  border: 1px solid #ccc;
-  padding: 20px;
+  border: 2px solid var(--border-color);
+  padding: clamp(10px, 2vw, 20px);
   margin-bottom: 5px;
   border-radius: 8px;
+  background-color: var(--secondary-color);
 }
 
+h1,
+h2 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color1);
+}
 h1 {
-  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
 }
 h2 {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 3vw, 1rem);
 }
 p,
 li {
-  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 /* Themes */
@@ -39,14 +57,16 @@ li {
   max-width: 200px;
   height: auto;
   margin-left: auto;
-  border: 2px solid #000;
+  border: 2px solid var(--border-color);
   border-top: 0;
   border-radius: 0 0 8px 8px;
   padding: 5px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--secondary-color);
+  z-index: 1000;
+  box-shadow: 0 2px 5px var(--shadow);
 }
 #desktop-theme-bar {
   display: none;
@@ -64,26 +84,67 @@ li {
 #hero {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  align-items: center;
 }
 #hero * {
   padding: 2px 0;
 }
-#profile-image {
+#intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#intro h2 {
+  font-weight: 500;
+}
+#intro #name,
+#intro #emoji {
+  font-weight: 700;
+  font-size: clamp(1rem, 3vw, 1.1rem);
+}
+#status {
+  position: relative;
+  width: clamp(100px, 30vw, 200px);
   aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  padding-left: 5%;
+}
+
+#profile-image {
   width: 100%;
-  max-width: 200px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--border-color);
+}
+
+#online {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 12%;
+  aspect-ratio: 1 / 1;
+  background-color: #31cc46;
+  border: 3px solid var(--border-color);
   border-radius: 50%;
 }
 
 /* About Section */
 #about * {
   padding: 2px 0;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Skills Section */
 #skills ul {
-  list-style-position: inside;
+  list-style-position: outside;
+  padding-left: 20px;
+}
+#skills ul li {
+  margin-bottom: 10px;
+}
+#skills ul li span {
+  font-weight: 700;
 }
 
 /* Works Section */
@@ -94,13 +155,18 @@ li {
   gap: 5px;
   padding: 0;
   border: 0;
+  background-color: transparent;
 }
 .my-works {
   aspect-ratio: 4 / 3;
   width: 100%;
   height: 100%;
-  border: 1px solid #ccc;
+  border: 2px solid var(--border-color);
   border-radius: 8px;
+  background-color: var(--secondary-color);
+}
+.my-works h2 {
+  padding: clamp(10px, 2vw, 20px);
 }
 
 /* Contacts Section */
@@ -110,9 +176,21 @@ li {
   align-items: flex-start;
   justify-content: center;
 }
+#contact i {
+  margin-right: 10px;
+}
 #social-links {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+#social-links a {
+  font-size: 1rem;
+}
+#social-links a i {
+  font-size: 1.2rem;
 }
 
 /* Resume Section */
@@ -127,6 +205,32 @@ li {
   align-items: center;
   justify-content: space-between;
   text-decoration: none;
+}
+#download-icon {
+  color: var(--text-color1);
+}
+
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+#arrow-circle {
+  font-size: clamp(2.8rem, 5vw, 3rem);
+  color: var(--text-color2);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.75;
+}
+#arrow-circle:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
 
 @media (min-width: 768px) {

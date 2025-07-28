@@ -1,9 +1,19 @@
+:root {
+  --primary-color: #252839;
+  --secondary-color: #2b2e3f;
+  --border-color: #4b4e5f;
+  --text-color1: #fefefe;
+  --text-color2: #f6f6f6;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+body {
+  background-color: var(--primary-color);
+}
 #artworks-container {
   display: flex;
   flex-direction: column;
@@ -14,13 +24,13 @@
 
 .artwork-tile {
   display: block;
-  background-color: #f0f0f0;
+  background-color: var(--secondary-color);
   border-radius: 8px;
   aspect-ratio: 1 / 1;
   width: 70vw;
   max-width: 250px;
   text-align: center;
-  border: 1px solid #ccc;
+  border: 2px solid var(--border-color);
 }
 
 @media (min-width: 768px) {
@@ -40,4 +50,27 @@
     margin: 0 auto;
     width: max-content;
   }
+}
+
+#back-to-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+#back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+#arrow-circle {
+  font-size: clamp(2.8rem, 5vw, 3rem);
+  color: var(--text-color2);
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  opacity: 0.75;
+}
+#arrow-circle:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
 }
