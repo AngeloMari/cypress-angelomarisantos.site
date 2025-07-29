@@ -6,6 +6,8 @@
   --text-color2: #f6f6f6;
   --shadow: rgba(0, 0, 0, 0.5);
 }
+
+/* light mode */
 .lightmode {
   --primary-color: #fefefe;
   --secondary-color: #f6f6f6;
@@ -14,20 +16,24 @@
   --text-color2: #2b2e3f;
   --shadow: rgba(0, 0, 0, 0.5);
 }
+
+/* Theme switch button */
 .theme-switch {
-  width: clamp(1rem, 1.5vw, 2rem);
-  height: clamp(1rem, 1.5vw, 2rem);
-  outline: 3px solid var(--radio-color, currentColor);
-  outline-offset: 3px;
-  border-radius: 50%;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  background-color: var(--secondary-color);
   display: flex;
   align-items: center;
   justify-content: center;
+  width: clamp(1rem, 1.5vw, 2rem);
+  height: clamp(1rem, 1.5vw, 2rem);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
+  background-color: var(--secondary-color);
 }
+
+/* Icons */
 #moon,
 #sun {
   color: var(--text-color2);
