@@ -6,6 +6,7 @@
   --text-color2: #f6f6f6;
   --shadow: rgba(0, 0, 0, 0.5);
   --online-status: #31cc46;
+  --themes: #4b4e5f;
 }
 * {
   box-sizing: border-box;
@@ -65,7 +66,7 @@ li {
   border: 2px solid var(--border-color);
   border-top: 0;
   border-radius: 0 0 8px 8px;
-  padding: 5px;
+  padding: 12px;
   background-color: var(--secondary-color);
   box-shadow: 0 2px 5px var(--shadow);
 }
@@ -73,9 +74,6 @@ li {
   display: none;
 }
 .themes {
-  aspect-ratio: 1 / 1;
-  width: 20%;
-  max-width: 30px;
   border-radius: 50%;
   background-color: #ccc;
   cursor: pointer;
