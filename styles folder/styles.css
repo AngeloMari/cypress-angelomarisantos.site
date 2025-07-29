@@ -191,11 +191,16 @@ section {
 #social-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
   gap: 10px;
   width: 100%;
   margin-top: 10px;
 }
 #social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 1rem;
 }
 #social-links a i {
