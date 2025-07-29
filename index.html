@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script defer src="index.js"></script>
+    <script defer src="themes.js"></script>
     <script defer src="/pages/goBack.js"></script>
     <script defer src="/pages/scrollToTop.js"></script>
     <link
@@ -20,13 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="/styles folder/themes.css"
-      <link
-      rel="stylesheet"
-      href="/pages/button-styles.css"
-    />
+    <link rel="stylesheet" href="/styles folder/themes.css" />
+    <link rel="stylesheet" href="/pages/button-styles.css" />
     <link rel="stylesheet" href="/styles folder/styles.css" />
     <title>Angelo Mari Santos</title>
   </head>
@@ -45,6 +40,10 @@
           <input type="radio" id="green" name="theme" checked />
         </fieldset>
       </form>
+      <button id="theme-switch">
+        <span class="material-symbols-outlined" id="sun"> brightness_5 </span>
+        <span class="material-symbols-outlined" id="moon"> moon_stars </span>
+      </button>
     </div>
     <main id="grid-layout">
       <section id="hero">
@@ -86,6 +85,14 @@
               <input type="radio" id="green" name="theme" checked />
             </fieldset>
           </form>
+          <button id="theme-switch">
+            <span class="material-symbols-outlined" id="sun">
+              brightness_5
+            </span>
+            <span class="material-symbols-outlined" id="moon">
+              moon_stars
+            </span>
+          </button>
         </section>
         <section id="about">
           <h2>About Me</h2>

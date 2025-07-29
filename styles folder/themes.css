@@ -56,3 +56,36 @@ section:hover,
   white-space: nowrap;
   width: 1px;
 }
+
+#theme-switch {
+  width: clamp(1.8rem, 2.3vw, 2.8rem);
+  height: clamp(1.8rem, 2.3vw, 2.8rem);
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#moon,
+#sun {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  color: var(--primary-color);
+}
+#moon {
+  display: none;
+}
+.lightmode #sun {
+  display: none;
+}
+.lightmode #moon {
+  display: block;
+}
+.lightmode {
+  --primary-color: #fcfcfc;
+  --secondary-color: #ededed;
+  --border-color: #d1d1d1;
+  --text-color1: #000000;
+  --text-color2: #41434f;
+  --shadow: #dfdfdf;
+}
