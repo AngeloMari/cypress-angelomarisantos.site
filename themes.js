@@ -1,50 +1,32 @@
-/* Theme Picker*/
 const colorThemes = document.querySelectorAll('[name="theme"]');
 
-// store theme
 const storeTheme = function (theme) {
   localStorage.setItem("theme", theme);
 };
 
-// set theme when visitor returns
+const applyTheme = function (theme) {
+  document.documentElement.classList.remove(
+    "red-theme",
+    "yellow-theme",
+    "green-theme"
+  );
+  document.documentElement.classList.add(`${theme}-theme`);
+};
+
 const setTheme = function () {
-  const activeTheme = localStorage.getItem("theme");
+  const activeTheme = localStorage.getItem("theme") || "green";
   colorThemes.forEach((themeOption) => {
-    if (themeOption.id === activeTheme) {
-      themeOption.checked = true;
-    }
+    themeOption.checked = themeOption.id === activeTheme;
   });
-  // fallback for no :has() support
-  document.documentElement.className = activeTheme;
+  applyTheme(activeTheme);
 };
 
 colorThemes.forEach((themeOption) => {
   themeOption.addEventListener("click", () => {
-    storeTheme(themeOption.id);
-    // fallback for no :has() support
-    document.documentElement.className = themeOption.id;
+    const theme = themeOption.id;
+    storeTheme(theme);
+    applyTheme(theme);
   });
 });
 
-document.onload = setTheme();
-
-/* Light Mode */
-let lightmode = localStorage.getItem("lightmode");
-const themeSwitch = document.getElementById("theme-switch");
-
-const enableLightmode = () => {
-  document.body.classList.add("lightmode");
-  localStorage.setItem("lightmode", "active");
-};
-
-const disableLightmode = () => {
-  document.body.classList.remove("lightmode");
-  localStorage.setItem("lightmode", null);
-};
-
-if (lightmode === "active") enableLightmode();
-
-themeSwitch.addEventListener("click", () => {
-  lightmode = localStorage.getItem("lightmode");
-  lightmode !== "active" ? enableLightmode() : disableLightmode();
-});
+document.addEventListener("DOMContentLoaded", setTheme);

@@ -1,0 +1,32 @@
+:root {
+  --primary-color: #252839;
+  --secondary-color: #2b2e3f;
+  --border-color: #4b4e5f;
+  --text-color1: #fefefe;
+  --text-color2: #f6f6f6;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+.lightmode {
+  --primary-color: #fefefe;
+  --secondary-color: #f6f6f6;
+  --border-color: #4b4e5f;
+  --text-color1: #252839;
+  --text-color2: #2b2e3f;
+  --shadow: rgba(0, 0, 0, 0.5);
+}
+.theme-switch {
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: red;
+}
+#moon {
+  display: none;
+}
+.lightmode #sun {
+  display: none;
+}
+.lightmode #moon {
+  display: block;
+}

@@ -9,10 +9,6 @@
   --themes: #4b4e5f;
 }
 
-section:hover,
-.my-works:hover {
-  border-color: var(--themes);
-}
 .color-picker > fieldset {
   border: 0;
   display: flex;
@@ -38,15 +34,17 @@ section:hover,
 .color-picker input[type="radio"]#green {
   --radio-color: #59dea2;
 }
-:root:has(#red:checked) {
+/* Theme fallback using HTML classes */
+html.red-theme {
   --themes: #ec4555;
 }
-:root:has(#yellow:checked) {
+html.yellow-theme {
   --themes: #fec733;
 }
-:root:has(#green:checked) {
+html.green-theme {
   --themes: #59dea2;
 }
+
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -56,36 +54,10 @@ section:hover,
   white-space: nowrap;
   width: 1px;
 }
-
-#theme-switch {
-  width: clamp(1.8rem, 2.3vw, 2.8rem);
-  height: clamp(1.8rem, 2.3vw, 2.8rem);
-  border-radius: 50%;
-  border: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+section:hover,
+.my-works:hover {
+  border-color: var(--themes);
 }
-#moon,
-#sun {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  color: var(--primary-color);
-}
-#moon {
-  display: none;
-}
-.lightmode #sun {
-  display: none;
-}
-.lightmode #moon {
-  display: block;
-}
-.lightmode {
-  --primary-color: #fcfcfc;
-  --secondary-color: #ededed;
-  --border-color: #d1d1d1;
-  --text-color1: #000000;
-  --text-color2: #41434f;
-  --shadow: #dfdfdf;
+#profile-image {
+  border: 3px solid var(--themes);
 }
