@@ -15,11 +15,23 @@
   --shadow: rgba(0, 0, 0, 0.5);
 }
 .theme-switch {
-  height: 50px;
-  width: 50px;
-  padding: 0;
+  width: clamp(1rem, 1.5vw, 2rem);
+  height: clamp(1rem, 1.5vw, 2rem);
+  outline: 3px solid var(--radio-color, currentColor);
+  outline-offset: 3px;
   border-radius: 50%;
-  background-color: red;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background-color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#moon,
+#sun {
+  color: var(--text-color2);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
 }
 #moon {
   display: none;
