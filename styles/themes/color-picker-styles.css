@@ -64,9 +64,21 @@ html.green-theme {
 
 /* Interactions */
 section:hover,
-.my-works:hover {
+.my-works:hover,
+#social-links a:hover {
   border-color: var(--themes);
 }
 #profile-image {
   border: 3px solid var(--themes);
+}
+#download {
+  border-color: var(--themes);
+  box-shadow: 3px 4px var(--themes);
+}
+#social-links a:hover *,
+#download:hover * {
+  color: var(--themes);
+}
+#social-links a:hover {
+  box-shadow: 2px 3px var(--themes);
 }
