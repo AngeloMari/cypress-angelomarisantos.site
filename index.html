@@ -3,15 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Angelo Mari Santos' Portfolio Website" />
+    <meta name="author" content="Angelo Mari Santos" />
+
+    <title>Angelo Mari Santos | Portfolio</title>
+
+    <link rel="icon" href="/assets/images/toga.jpg" type="image/png" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <script defer src="themes.js"></script>
-    <script defer src="lightmode.js"></script>
-    <script defer src="/pages/goBack.js"></script>
-    <script defer src="/pages/scrollToTop.js"></script>
-    <link rel="icon" href="images/toga.jpg" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
@@ -22,11 +24,14 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles folder/lightmode.css" />
-    <link rel="stylesheet" href="/styles folder/themes.css" />
-    <link rel="stylesheet" href="/pages/button-styles.css" />
-    <link rel="stylesheet" href="/styles folder/styles.css" />
-    <title>Angelo Mari Santos | Portfolio</title>
+
+    <link rel="stylesheet" href="/styles/base/styles.css" />
+    <link rel="stylesheet" href="/styles/themes/light-mode-styles.css" />
+    <link rel="stylesheet" href="/styles/themes/color-picker-styles.css" />
+
+    <script defer src="/scripts/colorPicker.js"></script>
+    <script defer src="/scripts/lightMode.js"></script>
+    <script defer src="/scripts/scrollToTop.js"></script>
   </head>
   <body>
     <div id="mobile-theme-bar">
@@ -71,7 +76,7 @@
         </div>
         <div id="status">
           <img
-            src="images/toga.jpg"
+            src="/assets/images/toga.jpg"
             alt="Angelo Mari Santos - Avatar"
             id="profile-image"
           />
@@ -131,18 +136,18 @@
         </ul>
       </section>
       <section id="works">
-        <a href="pages/projects.html" target="_blank"
+        <a href="/pages/projects.html" target="_blank"
           ><div class="my-works" id="projects"><h2>Projects</h2></div></a
         >
         <a href="" target="_blank"
           ><div class="my-works" id="testing"><h2>Testing Grounds</h2></div></a
         >
-        <a href="pages/certifications.html" target="_blank"
+        <a href="/pages/certifications.html" target="_blank"
           ><div class="my-works" id="certifications">
             <h2>Certifications</h2>
           </div></a
         >
-        <a href="pages/artworks.html" target="_blank"
+        <a href="/pages/artworks.html" target="_blank"
           ><div class="my-works" id="artworks"><h2>Artworks</h2></div></a
         >
       </section>
@@ -174,7 +179,7 @@
         </section>
         <section id="download">
           <a
-            href="/Resume, 2025.pdf"
+            href="/assets/pdf/resume.pdf"
             download="Angelo-Mari-Santos-Resume.pdf"
             id="download-resume"
           >
