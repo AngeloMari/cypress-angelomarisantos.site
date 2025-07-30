@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Angelo Mari Santos' Portfolio Website" />
     <meta name="author" content="Angelo Mari Santos" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Angelo Mari Santos | Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of a Computer Engineer specializing in system development, software quality assurance, and building reliable digital solutions."
+    />
+    <meta property="og:image" content="/assets/images/toga.jpg" />
+    <meta property="og:url" content="https://angelomarisantos.site" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <title>Angelo Mari Santos | Portfolio</title>
 
@@ -35,18 +45,21 @@
     <script defer src="/scripts/scrollToTop.js"></script>
   </head>
   <body>
+    <a href="#grid-layout" class="visually-hidden focusable skip-link"
+      >Skip to main content</a
+    >
     <div id="mobile-theme-bar">
       <form class="color-picker" action="">
         <fieldset>
           <legend class="visually-hidden">Pick a color scheme</legend>
+          <input type="radio" id="red" name="theme" value="red" />
           <label for="red" class="visually-hidden">Red theme</label>
-          <input type="radio" id="red" name="theme" />
 
+          <input type="radio" id="yellow" name="theme" value="yellow" />
           <label for="yellow" class="visually-hidden">Yellow theme</label>
-          <input type="radio" id="yellow" name="theme" />
 
+          <input type="radio" id="green" name="theme" value="green" checked />
           <label for="green" class="visually-hidden">Green theme</label>
-          <input type="radio" id="green" name="theme" checked />
 
           <button class="theme-switch">
             <span class="material-symbols-outlined" id="sun">
@@ -89,14 +102,20 @@
           <form class="color-picker" action="">
             <fieldset>
               <legend class="visually-hidden">Pick a color scheme</legend>
+              <input type="radio" id="red" name="theme" value="red" />
               <label for="red" class="visually-hidden">Red theme</label>
-              <input type="radio" id="red" name="theme" />
 
+              <input type="radio" id="yellow" name="theme" value="yellow" />
               <label for="yellow" class="visually-hidden">Yellow theme</label>
-              <input type="radio" id="yellow" name="theme" />
 
+              <input
+                type="radio"
+                id="green"
+                name="theme"
+                value="green"
+                checked
+              />
               <label for="green" class="visually-hidden">Green theme</label>
-              <input type="radio" id="green" name="theme" checked />
 
               <button class="theme-switch">
                 <span class="material-symbols-outlined" id="sun">
@@ -137,37 +156,70 @@
         </ul>
       </section>
       <section id="works">
-        <a href="/pages/projects.html" target="_blank"
-          ><div class="my-works" id="projects"><h2>Projects</h2></div></a
+        <a
+          href="/pages/projects.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="my-works-link"
+          aria-label="Go to Projects page"
         >
-        <a href="" target="_blank"
-          ><div class="my-works" id="testing"><h2>Testing Grounds</h2></div></a
+          <div class="my-works" id="projects">
+            <h2>Projects</h2>
+          </div>
+        </a>
+        <a
+          href="/pages/testing.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="my-works-link"
+          aria-label="Go to Testing page"
         >
-        <a href="/pages/certifications.html" target="_blank"
-          ><div class="my-works" id="certifications">
+          <div class="my-works" id="testing">
+            <h2>Testing Grounds</h2>
+          </div>
+        </a>
+        <a
+          href="/pages/certifications.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="my-works-link"
+          aria-label="Go to Certifications page"
+        >
+          <div class="my-works" id="certifications">
             <h2>Certifications</h2>
-          </div></a
+          </div>
+        </a>
+        <a
+          href="/pages/artworks.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="my-works-link"
+          aria-label="Go to Artworks page"
         >
-        <a href="/pages/artworks.html" target="_blank"
-          ><div class="my-works" id="artworks"><h2>Artworks</h2></div></a
-        >
+          <div class="my-works" id="artworks">
+            <h2>Artworks</h2>
+          </div>
+        </a>
       </section>
       <div id="contact-download">
-        <section id="contact">
+        <section id="contact" aria-label="Contact and social links">
           <h2>Let's Connect!</h2>
           <br />
           <div id="social-links">
             <a
               href="https://github.com/AngeloMari"
               target="_blank"
+              rel="noopener noreferrer"
               aria-label="GitHub"
             >
               <i class="fab fa-github" title="GitHub"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/engr-angelo-mari-santos/"
+              href="/pages/projects.html"
               target="_blank"
-              aria-label="LinkedIn"
+              rel="noopener noreferrer"
+              class="my-works-link"
+              aria-label="Go to Projects page"
             >
               <i class="fab fa-linkedin" title="LinkedIn"></i>
             </a>
