@@ -14,6 +14,8 @@
 body {
   background-color: var(--primary-color);
 }
+
+/* Certificates */
 #certification-container {
   display: flex;
   flex-direction: column;
@@ -21,7 +23,6 @@ body {
   gap: 0.8rem;
   padding: 50px 0;
 }
-
 .certification-tile {
   display: block;
   border: 2px solid var(--border-color);
@@ -32,7 +33,6 @@ body {
   text-align: center;
   background-color: var(--secondary-color);
 }
-
 .certification-image {
   display: block;
   width: 100%;
@@ -41,13 +41,13 @@ body {
   border-radius: 8px;
 }
 
+/* Scroll-to-top */
 #back-to-top {
   z-index: 999;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
 #back-to-top.show {
   opacity: 1;
   visibility: visible;
