@@ -189,16 +189,15 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 0;
+  pointer-events: none;
+  border-radius: 8px;
+  transform: translate(-50%, -50%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  background-size: 250px 250px;
-  background-repeat: repeat;
-  background-position: center;
-  opacity: 1;
-  pointer-events: none;
 }
 #projects::before {
   background-image: linear-gradient(
@@ -207,9 +206,6 @@ section {
       rgba(0, 0, 0, 0.5)
     ),
     url("/assets/images/backgrounds/projects-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 #testing::before {
   background-image: linear-gradient(
@@ -218,8 +214,6 @@ section {
       rgba(0, 0, 0, 0.25)
     ),
     url("/assets/images/backgrounds/testing-grounds-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
   background-position: right bottom;
 }
 #certifications::before {
@@ -229,20 +223,19 @@ section {
       rgba(0, 0, 0, 0.1)
     ),
     url("/assets/images/backgrounds/certifications-background.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 #artworks::before {
   width: 170%;
   height: 170%;
+  transform: translate(-50%, -50%) rotate(-35deg);
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.8) 5%,
       rgba(0, 0, 0, 0.5)
     ),
     url("/assets/images/backgrounds/artworks-background.png");
-  transform: translate(-50%, -50%) rotate(-35deg);
+  background-size: 250px 250px;
+  background-repeat: repeat;
 }
 
 /* Contacts section */
