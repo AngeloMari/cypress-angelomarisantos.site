@@ -4,7 +4,8 @@
   --border-color: #4b4e5f;
   --text-color1: #fefefe;
   --text-color2: #f6f6f6;
-  --shadow: rgba(0, 0, 0, 0.5);
+  --gradient1: #00000080;
+  --gradient2: #000000cc;
   --online-status: #31cc46;
   --themes: #4b4e5f;
 }
@@ -81,7 +82,7 @@ section {
   border-radius: 0 0 8px 8px;
   padding: 12px 0;
   background-color: var(--secondary-color);
-  box-shadow: 0 2px 5px var(--shadow);
+  box-shadow: 0 2px 5px var(--gradient1);
 }
 #desktop-theme-bar {
   display: none;
@@ -215,16 +216,18 @@ section {
 #projects::before {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.8) 5%,
-      rgba(0, 0, 0, 0.5)
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
     ),
     url("/assets/images/backgrounds/projects-background.png");
 }
 #testing::before {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.45) 5%,
-      rgba(0, 0, 0, 0.25)
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
     ),
     url("/assets/images/backgrounds/testing-grounds-background.png");
   background-position: right bottom;
@@ -232,8 +235,9 @@ section {
 #certifications::before {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.9) 5%,
-      rgba(0, 0, 0, 0.1)
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
     ),
     url("/assets/images/backgrounds/certifications-background.png");
 }
@@ -243,8 +247,9 @@ section {
   transform: translate(-50%, -50%) rotate(-35deg);
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.8) 5%,
-      rgba(0, 0, 0, 0.5)
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
     ),
     url("/assets/images/backgrounds/artworks-background.png");
   background-size: 250px 250px;

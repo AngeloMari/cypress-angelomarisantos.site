@@ -4,17 +4,20 @@
   --border-color: #4b4e5f;
   --text-color1: #fefefe;
   --text-color2: #f6f6f6;
-  --shadow: rgba(0, 0, 0, 0.5);
+  --gradient1: #00000080;
+  --gradient2: #000000cc;
 }
 
 /* light mode */
 .lightmode {
-  --primary-color: #fefefe;
-  --secondary-color: #f6f6f6;
-  --border-color: #4b4e5f;
-  --text-color1: #252839;
-  --text-color2: #2b2e3f;
-  --shadow: rgba(0, 0, 0, 0.5);
+  --primary-color: #f4f5fa;
+  --secondary-color: #f2f3f7;
+  --border-color: #c7cadb;
+  --text-color1: #333333;
+  --text-color2: #1a1a1a;
+  --gradient1: #d8dae080;
+  --gradient2: #e8e9f0cc;
+  /* soft white at 80% */
 }
 
 /* Theme switch button */
@@ -47,4 +50,64 @@
 }
 .lightmode #moon {
   display: block;
+}
+
+/* Themes */
+.lightmode .color-picker input[type="radio"]#red {
+  --radio-color: #d62839;
+}
+.lightmode .color-picker input[type="radio"]#yellow {
+  --radio-color: #e6a800;
+}
+.lightmode .color-picker input[type="radio"]#green {
+  --radio-color: #2ba673;
+}
+html.red-theme .lightmode {
+  --themes: #d62839;
+}
+html.yellow-theme .lightmode {
+  --themes: #e6a800;
+}
+html.green-theme .lightmode {
+  --themes: #2ba673;
+}
+
+.lightmode .my-works h2 {
+  color: var(--text-color1);
+}
+.lightmode #projects::before {
+  background-image: linear-gradient(
+      to bottom,
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
+    ),
+    url("/assets/images/backgrounds/lightmode-projects-background.png");
+}
+.lightmode #testing::before {
+  background-image: linear-gradient(
+      to bottom,
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
+    ),
+    url("/assets/images/backgrounds/lightmode-testing-background.png");
+}
+.lightmode #certifications::before {
+  background-image: linear-gradient(
+      to bottom,
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
+    ),
+    url("/assets/images/backgrounds/lightmode-certifications-background.png");
+}
+.lightmode #artworks::before {
+  background-image: linear-gradient(
+      to bottom,
+      var(--gradient2) 5%,
+      var(--gradient1) 25%,
+      transparent
+    ),
+    url("/assets/images/backgrounds/lightmode-artworks-background.png");
 }
