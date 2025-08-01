@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #252839;
+  --secondary-color: #2b2e3f;
+  --border-color: #4b4e5f;
+  --text-color1: #fefefe;
+  --text-color2: #f6f6f6;
+  --gradient1: #00000080;
+  --gradient2: #000000cc;
+  --themes: #4b4e5f;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,13 +30,17 @@ html {
   font-size: clamp(0.8rem, 3vw, 0.9rem);
   color: var(--text-color2);
   background-color: var(--secondary-color);
-  box-shadow: 0 4px 6px var(--shadow);
-  opacity: 0.75;
+  box-shadow: 3px 4px var(--border-color);
+  opacity: 0.8;
 }
 #back-btn:hover {
   background-color: var(--primary-color);
   color: var(--text-color1);
   opacity: 1;
+}
+#back-btn:active {
+  box-shadow: 1px 2px;
+  transform: translate(2px, 3px);
 }
 
 #back-to-top {

@@ -65,13 +65,17 @@ html.green-theme {
 /* Interactions */
 section:hover,
 .my-works:hover,
-#social-links a:hover {
+#social-links a:hover,
+.project-tile:hover,
+.certification-tile:hover,
+.artwork-tile:hover {
   border-color: var(--themes);
 }
 #profile-image {
   border: 3px solid var(--themes);
 }
-#download {
+#download,
+#back-btn {
   border-color: var(--themes);
   box-shadow: 3px 4px var(--themes);
 }

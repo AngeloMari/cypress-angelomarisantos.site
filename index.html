@@ -51,6 +51,7 @@
 
     <script defer src="/scripts/particles.min.js"></script>
     <script defer src="/scripts/particles-init.js"></script>
+    <script defer src="/scripts/toastNotification.js"></script>
 
     <script defer src="/scripts/colorPicker.js"></script>
     <script defer src="/scripts/lightMode.js"></script>
@@ -71,7 +72,7 @@
           <input type="radio" id="yellow" name="theme" value="yellow" />
           <label for="yellow" class="visually-hidden">Yellow theme</label>
 
-          <input type="radio" id="green" name="theme" value="green" checked />
+          <input type="radio" id="green" name="theme" value="green" />
           <label for="green" class="visually-hidden">Green theme</label>
 
           <button class="theme-switch">
@@ -91,8 +92,8 @@
           <h1>Hello!</h1>
           <br />
           <h2>
-            I’m <span id="name">Angelo</span>, a computer engineer specialized
-            in system development with a focus on software quality assurance.
+            I’m <span id="name">Angelo</span>, a computer engineer focused on
+            system development and software quality assurance.
           </h2>
           <br />
           <p>
@@ -147,7 +148,7 @@
           <p>
             I enjoy figuring out how systems work and how to improve them.<br /><br />
             As an SQA tester, I’ve designed and executed manual test cases using
-            tools like LambdaTest. I’m currently studying automation with
+            tools like LambdaTest. I’m currently learning automation with
             Selenium and Cypress.<br /><br />
             Outside of tech, you’ll likely find me sketching, playing music, or
             diving into random topics that spark my curiosity.
@@ -171,7 +172,7 @@
       <section id="works">
         <a
           href="/pages/projects.html"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
           class="my-works-link"
           aria-label="Go to Projects page"
@@ -181,11 +182,10 @@
           </div>
         </a>
         <a
-          href="/pages/testing-grounds.html"
-          target="_blank"
           rel="noopener noreferrer"
           class="my-works-link"
           aria-label="Go to Testing page"
+          id="testing-container"
         >
           <div class="my-works" id="testing">
             <h2>Testing Grounds</h2>
@@ -194,9 +194,10 @@
             </span>
           </div>
         </a>
+        <div id="toast" class="toast"></div>
         <a
           href="/pages/certifications.html"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
           class="my-works-link"
           aria-label="Go to Certifications page"
@@ -207,7 +208,7 @@
         </a>
         <a
           href="/pages/artworks.html"
-          target="_blank"
+          target="_self"
           rel="noopener noreferrer"
           class="my-works-link"
           aria-label="Go to Artworks page"

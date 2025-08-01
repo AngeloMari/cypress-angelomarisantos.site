@@ -47,7 +47,8 @@ h2 {
 h1 {
   font-size: clamp(2rem, 5vw, 2.5rem);
 }
-h2 {
+h2,
+.toast {
   font-size: clamp(0.9rem, 3vw, 1.05rem);
 }
 p,
@@ -268,9 +269,30 @@ section {
   position: absolute;
   color: var(--border-color);
   transform: rotate(-45deg);
-  font-size: clamp(5rem, 12vw, 8rem);
-  bottom: clamp(-18px, -2.5vw, -30px);
-  right: clamp(-18px, -2.5vw, -30px);
+  font-size: clamp(5rem, 12vw, 10rem);
+  bottom: clamp(-31px, -2.5vw, -15px);
+  right: clamp(-31px, -2.5vw, -15px);
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--secondary-color);
+  color: var(--text-color1);
+  padding: 10px 20px;
+  border: 1px solid var(--themes);
+  border-radius: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Contacts section */
