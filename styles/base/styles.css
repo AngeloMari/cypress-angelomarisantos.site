@@ -195,7 +195,6 @@ section {
 
 /* .my-works background */
 #projects::before,
-#testing::before,
 #certifications::before,
 #artworks::before {
   content: "";
@@ -215,14 +214,14 @@ section {
 }
 #projects::before {
   background-image: linear-gradient(
-      to bottom,
+      to bottom right,
       var(--gradient2) 5%,
-      var(--gradient1) 25%,
+      var(--gradient1) 40%,
       transparent
     ),
     url("/assets/images/backgrounds/projects-background.png");
 }
-#testing::before {
+/*#testing::before {
   background-image: linear-gradient(
       to bottom,
       var(--gradient2) 5%,
@@ -231,12 +230,12 @@ section {
     ),
     url("/assets/images/backgrounds/testing-grounds-background.png");
   background-position: right bottom;
-}
+}*/
 #certifications::before {
   background-image: linear-gradient(
-      to bottom,
+      to bottom right,
       var(--gradient2) 5%,
-      var(--gradient1) 25%,
+      var(--gradient1) 40%,
       transparent
     ),
     url("/assets/images/backgrounds/certifications-background.png");
@@ -246,14 +245,32 @@ section {
   height: 170%;
   transform: translate(-50%, -50%) rotate(-35deg);
   background-image: linear-gradient(
-      to bottom,
+      to bottom right,
       var(--gradient2) 5%,
-      var(--gradient1) 25%,
+      var(--gradient1) 40%,
       transparent
     ),
     url("/assets/images/backgrounds/artworks-background.png");
   background-size: 250px 250px;
   background-repeat: repeat;
+}
+#testing {
+  background: linear-gradient(
+      to bottom right,
+      var(--gradient2) 5%,
+      var(--gradient1) 40%,
+      transparent
+    ),
+    var(--secondary-color);
+  position: relative;
+}
+#bug {
+  position: absolute;
+  color: var(--border-color);
+  transform: rotate(-45deg);
+  font-size: clamp(5rem, 12vw, 8rem);
+  bottom: clamp(-18px, -2.5vw, -30px);
+  right: clamp(-18px, -2.5vw, -30px);
 }
 
 /* Contacts section */

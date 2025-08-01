@@ -76,7 +76,8 @@ section:hover,
   box-shadow: 3px 4px var(--themes);
 }
 #social-links a:hover *,
-#download:hover * {
+#download:hover *,
+#bug {
   color: var(--themes);
 }
 #social-links a:hover {

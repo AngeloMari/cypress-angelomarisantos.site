@@ -77,36 +77,27 @@ html.green-theme .lightmode {
 }
 .lightmode #projects::before {
   background-image: linear-gradient(
-      to bottom,
+      to bottom right,
       var(--gradient2) 5%,
-      var(--gradient1) 25%,
+      var(--gradient1) 30%,
       transparent
     ),
     url("/assets/images/backgrounds/lightmode-projects-background.png");
 }
-.lightmode #testing::before {
-  background-image: linear-gradient(
-      to bottom,
-      var(--gradient2) 5%,
-      var(--gradient1) 25%,
-      transparent
-    ),
-    url("/assets/images/backgrounds/lightmode-testing-background.png");
-}
 .lightmode #certifications::before {
   background-image: linear-gradient(
-      to bottom,
+      to bottom right,
       var(--gradient2) 5%,
-      var(--gradient1) 25%,
+      var(--gradient1) 30%,
       transparent
     ),
     url("/assets/images/backgrounds/lightmode-certifications-background.png");
 }
 .lightmode #artworks::before {
   background-image: linear-gradient(
-      to bottom,
+      to bottom right,
       var(--gradient2) 5%,
-      var(--gradient1) 25%,
+      var(--gradient1) 30%,
       transparent
     ),
     url("/assets/images/backgrounds/lightmode-artworks-background.png");
