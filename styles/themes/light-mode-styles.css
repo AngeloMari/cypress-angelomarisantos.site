@@ -73,7 +73,7 @@ html.green-theme .lightmode {
 }
 
 .lightmode .my-works h2 {
-  color: var(--text-color1);
+  text-shadow: 0 0 2px var(--secondary-color);
 }
 .lightmode #projects::before {
   background-image: linear-gradient(
