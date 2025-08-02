@@ -31,5 +31,4 @@ Some of my commissioned and personal illustrations and graphic design works thro
 
 ## 📸 Screenshots
 <img width="1922" height="898" alt="desktop-snapshot" src="https://github.com/user-attachments/assets/ff36ac71-2295-4d7d-9cc3-62efb63c513d" />
-![Screenshot_20250802_160031_Chrome](https://github.com/user-attachments/assets/4f11527c-0e41-4d22-bed2-64408994ca31)
 
