@@ -49,8 +49,16 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/styles/components/button-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/styles/pages/certification-styles.css" />
+    <link rel="stylesheet" href="/styles/components/button-styles.css" />
+    <link rel="stylesheet" href="/styles/components/description-styles.css" />
     <link rel="stylesheet" href="/styles/themes/color-picker-styles.css" />
     <link rel="stylesheet" href="/styles/themes/light-mode-styles.css" />
 
@@ -60,6 +68,10 @@
   </head>
   <body>
     <button onclick="goBack()" id="back-btn">Go Back</button>
+    <h1 id="page-description">
+      Here are some of the certifications I’ve earned. You can click on a tile
+      or scan the QR code to view and verify them!
+    </h1>
     <div id="certification-container">
       <a
         href="https://www.freecodecamp.org/certification/RockyRaccoon08/responsive-web-design"

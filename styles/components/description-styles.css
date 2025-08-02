@@ -1,0 +1,14 @@
+root {
+  --text-color1: #fefefe;
+}
+
+#page-description {
+  width: 85vw;
+  max-width: 700px;
+  margin: 50px auto;
+  padding-top: 20px;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(0.9rem, 3vw, 1.05rem);
+  text-align: center;
+  color: var(--text-color1);
+}

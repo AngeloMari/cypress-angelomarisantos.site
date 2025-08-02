@@ -21,7 +21,7 @@ body {
   gap: 1rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 50px 1rem;
+  padding: 0 1rem 50px 1rem;
 }
 .project-tile {
   position: relative;
