@@ -2,9 +2,7 @@
   --primary-color: #252839;
   --secondary-color: #2b2e3f;
   --border-color: #4b4e5f;
-  --text-color1: #fefefe;
   --text-color2: #f6f6f6;
-  --shadow: rgba(0, 0, 0, 0.5);
 }
 * {
   box-sizing: border-box;
@@ -25,13 +23,13 @@ body {
 }
 .artwork-tile {
   display: block;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
-  background-color: var(--secondary-color);
   aspect-ratio: 1 / 1;
   width: 70vw;
   max-width: 250px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
   text-align: center;
+  background-color: var(--secondary-color);
 }
 
 /* Scroll-to-top */

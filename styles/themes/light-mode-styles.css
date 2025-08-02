@@ -6,6 +6,12 @@
   --text-color2: #f6f6f6;
   --gradient1: #00000080;
   --gradient2: #000000cc;
+  --diagonal-gradient: linear-gradient(
+    to bottom right,
+    var(--gradient2) 5%,
+    var(--gradient1) 30%,
+    transparent
+  );
 }
 
 /* light mode */
@@ -17,7 +23,12 @@
   --text-color2: #1a1a1a;
   --gradient1: #d8dae080;
   --gradient2: #e8e9f0cc;
-  /* soft white at 80% */
+  --diagonal-gradient: linear-gradient(
+    to bottom right,
+    var(--gradient2) 5%,
+    var(--gradient1) 30%,
+    transparent
+  );
 }
 
 /* Theme switch button */
@@ -39,8 +50,8 @@
 /* Icons */
 #moon,
 #sun {
-  color: var(--text-color2);
   font-size: clamp(1.2rem, 2vw, 1.6rem);
+  color: var(--text-color2);
 }
 #moon {
   display: none;
@@ -76,29 +87,14 @@ html.green-theme .lightmode {
   text-shadow: 0 0 2px var(--secondary-color);
 }
 .lightmode #projects::before {
-  background-image: linear-gradient(
-      to bottom right,
-      var(--gradient2) 5%,
-      var(--gradient1) 30%,
-      transparent
-    ),
+  background-image: var(--diagonal-gradient),
     url("/assets/images/backgrounds/lightmode-projects-background.png");
 }
 .lightmode #certifications::before {
-  background-image: linear-gradient(
-      to bottom right,
-      var(--gradient2) 5%,
-      var(--gradient1) 30%,
-      transparent
-    ),
+  background-image: var(--diagonal-gradient),
     url("/assets/images/backgrounds/lightmode-certifications-background.png");
 }
 .lightmode #artworks::before {
-  background-image: linear-gradient(
-      to bottom right,
-      var(--gradient2) 5%,
-      var(--gradient1) 30%,
-      transparent
-    ),
+  background-image: var(--diagonal-gradient),
     url("/assets/images/backgrounds/lightmode-artworks-background.png");
 }

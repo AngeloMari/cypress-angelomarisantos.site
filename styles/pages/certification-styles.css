@@ -2,9 +2,7 @@
   --primary-color: #252839;
   --secondary-color: #2b2e3f;
   --border-color: #4b4e5f;
-  --text-color1: #fefefe;
   --text-color2: #f6f6f6;
-  --shadow: rgba(0, 0, 0, 0.5);
 }
 * {
   box-sizing: border-box;
@@ -37,8 +35,8 @@ body {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 /* Scroll-to-top */

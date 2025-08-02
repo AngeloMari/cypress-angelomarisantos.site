@@ -4,9 +4,6 @@
   --border-color: #4b4e5f;
   --text-color1: #fefefe;
   --text-color2: #f6f6f6;
-  --gradient1: #00000080;
-  --gradient2: #000000cc;
-  --themes: #4b4e5f;
 }
 * {
   box-sizing: border-box;

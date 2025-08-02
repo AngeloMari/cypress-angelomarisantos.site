@@ -8,6 +8,12 @@
   --gradient2: #000000cc;
   --online-status: #31cc46;
   --themes: #4b4e5f;
+  --diagonal-gradient: linear-gradient(
+    to bottom right,
+    var(--gradient2) 5%,
+    var(--gradient1) 40%,
+    transparent
+  );
 }
 * {
   box-sizing: border-box;
@@ -110,8 +116,8 @@ section {
   justify-content: center;
 }
 #intro h2 {
-  font-weight: 400;
   font-size: clamp(1rem, 3vw, 1.1rem);
+  font-weight: 400;
 }
 #intro p,
 #social-links a {
@@ -206,76 +212,45 @@ section {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 0;
-  pointer-events: none;
-  border-radius: 8px;
   transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 101%;
+  height: 101%;
+  border-radius: 8px;
+  padding: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 101%;
-  height: 101%;
-  padding: 0;
+  pointer-events: none;
 }
 #projects::before {
-  background-image: linear-gradient(
-      to bottom right,
-      var(--gradient2) 5%,
-      var(--gradient1) 40%,
-      transparent
-    ),
+  background-image: var(--diagonal-gradient),
     url("/assets/images/backgrounds/projects-background.png");
 }
-/*#testing::before {
-  background-image: linear-gradient(
-      to bottom,
-      var(--gradient2) 5%,
-      var(--gradient1) 25%,
-      transparent
-    ),
-    url("/assets/images/backgrounds/testing-grounds-background.png");
-  background-position: right bottom;
-}*/
 #certifications::before {
-  background-image: linear-gradient(
-      to bottom right,
-      var(--gradient2) 5%,
-      var(--gradient1) 40%,
-      transparent
-    ),
+  background-image: var(--diagonal-gradient),
     url("/assets/images/backgrounds/certifications-background.png");
 }
 #artworks::before {
   width: 170%;
   height: 170%;
   transform: translate(-50%, -50%) rotate(-35deg);
-  background-image: linear-gradient(
-      to bottom right,
-      var(--gradient2) 5%,
-      var(--gradient1) 40%,
-      transparent
-    ),
+  background-image: var(--diagonal-gradient),
     url("/assets/images/backgrounds/artworks-background.png");
   background-size: 250px 250px;
   background-repeat: repeat;
 }
 #testing {
-  background: linear-gradient(
-      to bottom right,
-      var(--gradient2) 5%,
-      var(--gradient1) 40%,
-      transparent
-    ),
-    var(--secondary-color);
+  background: var(--diagonal-gradient), var(--secondary-color);
   position: relative;
 }
 #bug {
   position: absolute;
-  color: var(--border-color);
-  transform: rotate(-45deg);
-  font-size: clamp(5rem, 12vw, 10rem);
   bottom: clamp(-31px, -2.5vw, -15px);
   right: clamp(-31px, -2.5vw, -15px);
+  transform: rotate(-45deg);
+  font-size: clamp(5rem, 12vw, 10rem);
+  color: var(--border-color);
 }
 
 /* Toast notification */
@@ -283,15 +258,15 @@ section {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: var(--secondary-color);
-  color: var(--text-color1);
-  padding: 10px 20px;
+  z-index: 9999;
   border: 1px solid var(--themes);
   border-radius: 8px;
+  padding: 10px 20px;
+  color: var(--text-color1);
+  background-color: var(--secondary-color);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
-  z-index: 9999;
 }
 
 .toast.show {
@@ -341,10 +316,10 @@ section {
 
 /* Download resume */
 #download {
+  position: relative;
   width: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
-  position: relative;
 }
 #download:active {
   box-shadow: 1px 2px;
