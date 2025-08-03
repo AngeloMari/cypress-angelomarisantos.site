@@ -57,7 +57,8 @@ section:hover,
 #social-links a:hover,
 .project-tile:hover,
 .certification-tile:hover,
-.artwork-tile:hover {
+.artwork-tile:hover,
+.roadmap-tile:hover {
   border-color: var(--themes);
 }
 #profile-image {

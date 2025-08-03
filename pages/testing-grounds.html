@@ -1,16 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Testing Grounds</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="A personal QA roadmap tracker by Angelo Mari Santos. Follow his progress and journey in learning software testing based on the roadmap from roadmap.sh."
+    />
+    <meta name="author" content="Angelo Mari Santos" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="Angelo Mari Santos | Testing Grounds" />
+    <meta
+      property="og:description"
+      content="Explore Angelo Mari Santos' progress in quality assurance using the QA roadmap from roadmap.sh. A visual journey in mastering software testing."
+    />
+    <meta property="og:image" content="/assets/images/qa-roadmap.png" />
+    <meta
+      property="og:url"
+      content="https://angelomarisantos.site/pages/testing-grounds.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Angelo Mari Santos | Testing Grounds" />
+    <meta
+      name="twitter:description"
+      content="Track Angelo Mari Santos’ QA learning progress with a visual roadmap. Based on the QA roadmap from roadmap.sh."
+    />
+    <meta name="twitter:image" content="/assets/images/qa-roadmap.png" />
+
+    <title>Angelo Mari Santos | Testing Grounds</title>
+
+    <link
+      rel="icon"
+      href="/assets/images/favicons/testing-grounds.png"
+      type="image/png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/styles/pages/testing-grounds-styles.css" />
+    <link rel="stylesheet" href="/styles/components/button-styles.css" />
+    <link rel="stylesheet" href="/styles/components/description-styles.css" />
+    <link rel="stylesheet" href="/styles/themes/color-picker-styles.css" />
+    <link rel="stylesheet" href="/styles/themes/light-mode-styles.css" />
+
+    <script src="/scripts/otherPagesTheme.js"></script>
+    <script defer src="/scripts/goBack.js"></script>
+    <script defer src="/scripts/scrollToTop.js"></script>
   </head>
   <body>
-    <div class="background-container">
-      <iframe
-        src="https://framer.com/m/Rays-Prod-o7ad"
-        width="100%"
-        height="100%"
-        style="position: fixed; top: 0; left: 0; z-index: -1; border: none"
-      ></iframe>
+    <button onclick="goBack()" id="back-btn">Go Back</button>
+    <h1 id="page-description">
+      Welcome to my Testing Grounds! Track my Software Quality Assurance roadmap
+      progress and testing journey here.
+    </h1>
+
+    <div id="roadmap-container">
+      <a href="https://roadmap.sh/qa" target="_blank" class="roadmap-tile">
+        <img
+          src="/assets/images/qa-roadmap.png"
+          alt="Software Quality Assurance roadmap progress."
+          class="roadmap-image"
+        />
+      </a>
     </div>
+    <a id="back-to-top" href="#">
+      <span class="material-symbols-outlined" id="arrow-circle"
+        >arrow_circle_up</span
+      >
+    </a>
   </body>
 </html>
