@@ -1,34 +1,20 @@
-# Angelo Mari Santos — Personal Portfolio
+# Cypress Tests for angelomarisantos.site
 
-This is my personal portfolio website built to showcase my solo projects, certifications, and commissioned/passion artwork throughout the years.
+This repository contains the same codebase as my personal portfolio website, with the addition of Cypress test scripts for end-to-end testing.
 
 ## 🔗 Live Website
 
 [Visit my portfolio →](https://angelomarisantos.site)
 
-## 📁 Sections
+## 🧪 Testing With Cypress
 
-### 🛠️ Projects  
-Solo projects I've built for certifications and personal learning.  
-> Tap on a project to see it in action!
+Go to the `/cypress` folder to access the test scripts.
 
-### 📜 Certifications  
-Verified certificates from online platforms.  
-> Click each tile or scan the QR code to verify them.
-
-### 🎨 Artworks  
-Some of my commissioned and personal illustrations and graphic design works through the years.
-
----
-
-## ⚙️ Built With
-
-- **HTML5**  
-- **CSS3**
-- **JavaScript**
+> Remember to install Cypress (`npm install cypress --save-dev`) if you want to try them out.
 
 ---
 
 ## 📸 Screenshots
-<img width="1922" height="898" alt="desktop-snapshot" src="https://github.com/user-attachments/assets/ff36ac71-2295-4d7d-9cc3-62efb63c513d" />
 
+<img width="1920" alt="desktop-snapshot" src="/assets/images/testings/main-page.png" />
+<img width="1920" alt="desktop-snapshot" src="/assets/images/testings/subpages.png" />
