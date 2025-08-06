@@ -69,6 +69,7 @@
   <body>
     <main id="artworks-main">
       <button
+        data-test="go-back-btn"
         onclick="goBack()"
         id="back-btn"
         aria-label="Go back to previous page"
@@ -225,8 +226,12 @@
           role="listitem"
         />
       </div>
-
-      <a id="back-to-top" href="#" aria-label="Back to top of page">
+      <a
+        data-test="back-to-top-btn"
+        id="back-to-top"
+        href="#"
+        aria-label="Back to top of page"
+      >
         <span class="material-symbols-outlined" id="arrow-circle"
           >arrow_circle_up</span
         >

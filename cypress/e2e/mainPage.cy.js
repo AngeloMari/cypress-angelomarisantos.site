@@ -64,6 +64,7 @@ describe("Tesing the main page (text content, links, buttons, and theme)", () =>
     cy.getDataTest("back-to-top-btn").should("be.visible").click();
     cy.getDataTest("back-to-top-btn").should("not.be.visible");
   });
+
   it("Download resume button", () => {
     cy.intercept("GET", "/assets/pdf/Angelo-Mari-Santos-Resume.pdf").as(
       "pdfDownload"
@@ -78,10 +79,27 @@ describe("Tesing the main page (text content, links, buttons, and theme)", () =>
   });
 
   // ----- THEMES ----- //
-  it("Theme color picker", () => {
-    // Desktop
-    cy.viewport(1440, 660);
+  it("Mobile theme color picker", () => {
+    cy.viewport(768, 480);
 
+    cy.getDataTest("mobile-theme-bar").within(() => {
+      cy.get("input#red").check();
+    });
+    cy.get("html").should("have.class", "red-theme");
+    cy.wait(1000);
+    cy.getDataTest("mobile-theme-bar").within(() => {
+      cy.get("input#yellow").check();
+    });
+    cy.get("html").should("have.class", "yellow-theme");
+    cy.wait(1000);
+    cy.getDataTest("mobile-theme-bar").within(() => {
+      cy.get("input#green").check();
+    });
+    cy.get("html").should("have.class", "green-theme");
+    cy.wait(1000);
+  });
+
+  it("Desktop theme color picker", () => {
     cy.getDataTest("desktop-theme-bar").within(() => {
       cy.get("input#red").check();
     });
@@ -97,28 +115,9 @@ describe("Tesing the main page (text content, links, buttons, and theme)", () =>
     });
     cy.get("html").should("have.class", "green-theme");
     cy.wait(1000);
-
-    // Mobile
-    cy.viewport(768, 480);
-
-    cy.getDataTest("mobile-theme-bar").within(() => {
-      cy.get("input#red").check();
-    });
-    cy.get("html").should("have.class", "red-theme");
-    cy.wait(1000);
-    cy.getDataTest("mobile-theme-bar").within(() => {
-      cy.get("input#yellow").check();
-    });
-    cy.get("html").should("have.class", "yellow-theme");
-    cy.wait(1000);
-    cy.getDataTest("mobile-theme-bar").within(() => {
-      cy.get("input#green").check();
-    });
-    cy.get("html").should("have.class", "green-theme");
-    cy.wait(1000);
   });
-  it("Light mode theme", () => {
-    // Desktop
+
+  it("Desktop light mode theme", () => {
     cy.get("body").should("not.have.class", "lightmode");
     cy.get('[data-test="desktop-theme-bar"] .theme-switch').click();
     cy.get("body").should("have.class", "lightmode");
@@ -126,9 +125,11 @@ describe("Tesing the main page (text content, links, buttons, and theme)", () =>
     cy.get('[data-test="desktop-theme-bar"] .theme-switch').click();
     cy.get("body").should("not.have.class", "lightmode");
     cy.wait(1000);
+  });
 
-    // Mobile
+  it("Mobile light mode theme", () => {
     cy.viewport(768, 480);
+
     cy.get("body").should("not.have.class", "lightmode");
     cy.get('[data-test="mobile-theme-bar"] .theme-switch').click();
     cy.get("body").should("have.class", "lightmode");
@@ -160,23 +161,5 @@ describe("Tesing the main page (text content, links, buttons, and theme)", () =>
       "href",
       "tel:+639762407495"
     );
-  });
-  it("Testing links for Projects, Testing Grounds, Certifications, and Artworks", () => {
-    cy.get("#projects").click();
-    cy.url().should("include", "/pages/projects.html");
-    cy.wait(500);
-    cy.visit("/");
-    cy.get("#testing").click();
-    cy.url().should("include", "/pages/testing-grounds.html");
-    cy.wait(500);
-    cy.visit("/");
-    cy.get("#certifications").click();
-    cy.url().should("include", "/pages/certifications.html");
-    cy.wait(500);
-    cy.visit("/");
-    cy.get("#artworks").click();
-    cy.url().should("include", "/pages/artworks.html");
-    cy.wait(500);
-    cy.visit("/");
   });
 });

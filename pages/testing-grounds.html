@@ -61,7 +61,9 @@
     <script defer src="/scripts/scrollToTop.js"></script>
   </head>
   <body>
-    <button onclick="goBack()" id="back-btn">Go Back</button>
+    <button data-test="go-back-btn" onclick="goBack()" id="back-btn">
+      Go Back
+    </button>
     <h1 id="page-description">
       Welcome to my Testing Grounds! Track my Software Quality Assurance roadmap
       progress and testing journey here.
@@ -76,7 +78,7 @@
         />
       </a>
     </div>
-    <a id="back-to-top" href="#">
+    <a data-test="back-to-top-btn" id="back-to-top" href="#">
       <span class="material-symbols-outlined" id="arrow-circle"
         >arrow_circle_up</span
       >
