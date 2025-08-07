@@ -5,9 +5,11 @@ describe("Tesing sub pages", () => {
   });
 
   // ----- SCROLL-TO-TOP AND GO BACK BUTTONS ----- //
-  it("Projects page buttons", () => {
+  it.only("Projects page buttons", () => {
     cy.get("#projects").click();
     cy.url().should("include", "/pages/projects.html");
+    cy.getDataTest("go-back-btn").should("be.visible");
+    cy.getDataTest("go-back-btn").should("have.css", "position", "static");
     cy.getDataTest("back-to-top-btn").should("not.be.visible");
     cy.scrollTo("bottom");
     cy.wait(500); // added wait throughout the test to see changes visually
@@ -20,6 +22,8 @@ describe("Tesing sub pages", () => {
   it("Testing Grounds page buttons", () => {
     cy.get("#testing").click();
     cy.url().should("include", "/pages/testing-grounds.html");
+    cy.getDataTest("go-back-btn").should("be.visible");
+    cy.getDataTest("go-back-btn").should("have.css", "position", "static");
     cy.getDataTest("back-to-top-btn").should("not.be.visible");
     cy.scrollTo("bottom");
     cy.wait(500);
@@ -32,6 +36,8 @@ describe("Tesing sub pages", () => {
   it("Certifications page buttons", () => {
     cy.get("#certifications").click();
     cy.url().should("include", "/pages/certifications.html");
+    cy.getDataTest("go-back-btn").should("be.visible");
+    cy.getDataTest("go-back-btn").should("have.css", "position", "static");
     cy.getDataTest("back-to-top-btn").should("not.be.visible");
     cy.scrollTo("bottom");
     cy.wait(500);
@@ -44,6 +50,8 @@ describe("Tesing sub pages", () => {
   it("Artworks page buttons", () => {
     cy.get("#artworks").click();
     cy.url().should("include", "/pages/artworks.html");
+    cy.getDataTest("go-back-btn").should("be.visible");
+    cy.getDataTest("go-back-btn").should("have.css", "position", "static");
     cy.getDataTest("back-to-top-btn").should("not.be.visible");
     cy.scrollTo("bottom");
     cy.wait(500);
