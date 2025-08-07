@@ -5,7 +5,7 @@ describe("Tesing sub pages", () => {
   });
 
   // ----- SCROLL-TO-TOP AND GO BACK BUTTONS ----- //
-  it.only("Projects page buttons", () => {
+  it("Projects page buttons", () => {
     cy.get("#projects").click();
     cy.url().should("include", "/pages/projects.html");
     cy.getDataTest("go-back-btn").should("be.visible");
